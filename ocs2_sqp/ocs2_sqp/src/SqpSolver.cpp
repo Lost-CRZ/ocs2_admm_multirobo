@@ -125,6 +125,18 @@ std::string SqpSolver::getBenchmarkingInformation() const {
   return infoStream.str();
 }
 
+scalar_t SqpSolver::getTotalTimeInMilliseconds() const
+{
+  const scalar_t linearQuadraticApproximationTotal = linearQuadraticApproximationTimer_.getTotalInMilliseconds();
+  const scalar_t solveQpTotal = solveQpTimer_.getTotalInMilliseconds();
+  const scalar_t linesearchTotal = linesearchTimer_.getTotalInMilliseconds();
+  const scalar_t computeControllerTotal = computeControllerTimer_.getTotalInMilliseconds();
+
+  const scalar_t benchmarkTotal = linearQuadraticApproximationTotal + solveQpTotal + linesearchTotal + computeControllerTotal;
+
+  return benchmarkTotal;
+}
+
 const std::vector<PerformanceIndex>& SqpSolver::getIterationsLog() const {
   if (performanceIndeces_.empty()) {
     throw std::runtime_error("[SqpSolver]: No performance log yet, no problem solved yet?");

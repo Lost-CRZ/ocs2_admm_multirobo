@@ -90,6 +90,8 @@ class SqpSolver : public SolverBase {
     throw std::runtime_error("[SqpSolver] getIntermediateDualSolution() not available yet.");
   }
 
+  scalar_t getTotalTimeInMilliseconds() const;
+
  private:
   void runImpl(scalar_t initTime, const vector_t& initState, scalar_t finalTime) override;
 
