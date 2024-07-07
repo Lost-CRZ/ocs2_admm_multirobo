@@ -289,18 +289,11 @@ matrix_t CppAdInterface::getHessian(const vector_t& w, const vector_t& x, const 
 /******************************************************************************************************/
 /******************************************************************************************************/
 void CppAdInterface::setFolderNames() {
-  std::cout << "folderName_: " << folderName_ << std::endl;
-  std::cout << "modelName_: " << modelName_ << std::endl;
-
   std::string homeDirectory = boost::filesystem::path(getenv("HOME")).string();     
 
-  std::cout << "homeDirectory: " << homeDirectory << std::endl;
-
   if (!folderName_.empty()) {
-    std::cout << "folder not empty!" << std::endl;
     libraryFolder_ = homeDirectory + folderName_ + "/" + modelName_ + "/cppad_generated";
   } else {
-    std::cout << "folder is empty!" << std::endl;
     libraryFolder_ = homeDirectory + "/" + modelName_ + "/cppad_generated";
   }
   tmpName_ = getUniqueTemporaryName();
