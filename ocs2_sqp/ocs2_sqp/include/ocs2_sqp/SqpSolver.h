@@ -72,6 +72,10 @@ class SqpSolver : public SolverBase {
 
   const OptimalControlProblem& getOptimalControlProblem() const override { return ocpDefinitions_.front(); }
 
+  OptimalControlProblem& getOptimalControlProblem() { return ocpDefinitions_.front(); }
+
+  std::vector<OptimalControlProblem>& getOptimalControlProblems() { return ocpDefinitions_; }
+
   const PerformanceIndex& getPerformanceIndeces() const override { return getIterationsLog().back(); };
 
   const std::vector<PerformanceIndex>& getIterationsLog() const override;

@@ -46,6 +46,7 @@ class SystemDynamicsBaseAD : public SystemDynamicsBase {
  public:
   /** Constructor */
   SystemDynamicsBaseAD();
+  explicit SystemDynamicsBaseAD(const PreComputation& preComputation);
 
   /** Default destructor */
   ~SystemDynamicsBaseAD() override = default;

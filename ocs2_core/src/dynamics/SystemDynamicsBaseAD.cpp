@@ -39,6 +39,11 @@ SystemDynamicsBaseAD::SystemDynamicsBaseAD() : SystemDynamicsBase() {}
 /******************************************************************************************************/
 /******************************************************************************************************/
 /******************************************************************************************************/
+SystemDynamicsBaseAD::SystemDynamicsBaseAD(const PreComputation& preComputation) : SystemDynamicsBase(preComputation) {}
+
+/******************************************************************************************************/
+/******************************************************************************************************/
+/******************************************************************************************************/
 SystemDynamicsBaseAD::SystemDynamicsBaseAD(const SystemDynamicsBaseAD& rhs)
     : SystemDynamicsBase(rhs),
       flowMapADInterfacePtr_(new CppAdInterface(*rhs.flowMapADInterfacePtr_)),
