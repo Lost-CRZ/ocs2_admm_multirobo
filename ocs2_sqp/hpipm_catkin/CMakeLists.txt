@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   ocs2_qp_solver
 )
 
+set(Eigen3_DIR /usr/local/share/eigen3/cmake)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 include(FetchContent)

@@ -11,6 +11,7 @@ find_package(Boost REQUIRED COMPONENTS
   filesystem
 )
 
+set(Eigen3_DIR /usr/local/share/eigen3/cmake)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 # Generate compile_commands.json for clang tools

@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   ocs2_oc
 )
 
+set(Eigen3_DIR /usr/local/share/eigen3/cmake)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 ###################################

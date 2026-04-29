@@ -27,6 +27,7 @@ pkg_check_modules(pinocchio REQUIRED pinocchio)
 pkg_check_modules(hpp-fcl REQUIRED hpp-fcl)
 # requires liboctomap-dev and libassimp-dev
 
+set(Eigen3_DIR /usr/local/share/eigen3/cmake)
 find_package(Eigen3 3.3 REQUIRED NO_MODULE)
 
 ###################################
